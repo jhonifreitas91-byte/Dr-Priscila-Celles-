@@ -77,11 +77,33 @@
         }
         
         .testimonial {
-            background: #fafafa;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            border: 1px solid #eee;
+    max-width: 420px;      /* controla o tamanho do depoimento */
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-sizing: border-box;
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 160px;         /* altura fixa do quadrado */
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;      /* ISSO impede a imagem de estourar */
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;   /* mantém a imagem inteira */
+    border-radius: 8px;
+}
         }
         
         .stars {
