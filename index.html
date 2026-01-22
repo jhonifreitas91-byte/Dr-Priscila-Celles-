@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚠️ CUIDADO! Em 2 semanas sua cueca vai ficar TÃO APERTADA que você vai precisar comprar outra…  ⚠️</title>
+    <title>⚠️ CUIDADO! Em 2 semanas sua cueca vai ficar TÃO APERTADA que você vai precisar comprar outra…   ⚠️</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
         body{
@@ -121,13 +121,75 @@
             z-index:9999;
             box-shadow:0 0 10px #0f0aa;
         }
+        /* NEW: EGO KILLER TOP BAR */
+        .ego-killer{
+            background:#ff0055;
+            color:#fff;
+            text-align:center;
+            padding:12px;
+            font-size:1.3em;
+            font-weight:900;
+            text-shadow:0 0 4px #000;
+        }
+        /* NEW: SIZE SLIDER */
+        .slider-box{
+            background:#000;
+            border:2px solid #ff0055;
+            padding:20px;
+            border-radius:10px;
+            text-align:center;
+            margin:20px 0;
+        }
+        .slider{
+            width:80%;
+            margin:10px auto;
+            display:block;
+        }
+        #size-display{
+            font-size:2em;
+            color:#ff0055;
+            font-weight:900;
+        }
+        #slider-popup{
+            display:none;
+            background:#ff0055;
+            color:#fff;
+            padding:15px;
+            border-radius:8px;
+            margin-top:15px;
+            font-weight:900;
+        }
+        /* NEW: DUAL CTA */
+        .dual-cta{
+            display:flex;
+            gap:10px;
+            justify-content:center;
+            flex-wrap:wrap;
+        }
+        .btn-broke{
+            background:#444;
+            color:#aaa;
+            padding:15px 25px;
+            border-radius:25px;
+            font-size:1em;
+            cursor:not-allowed;
+            opacity:.7;
+        }
+        /* NEW: AUDIO PLAYER */
+        .audio-box{
+            background:rgba(255,255,255,.05);
+            border-left:4px solid #ff0055;
+            padding:15px;
+            margin:15px 0;
+            text-align:center;
+        }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>⚠️ CUIDADO! Em 2 semanas sua cueca vai ficar TÃO APERTADA que você vai precisar comprar outra…  ⚠️</h1>
-    <p>Por Dr. Priscila Celles – Especialista em Saúde Masculina</p>
+<!-- EGO KILLER TOP BAR -->
+<div class="ego-killer">
+    Se você tem menos que 14 cm duro, <strong>NÃO É HOMEM O BASTANTE</strong> pra ela. Aceite.
 </div>
 
 <div class="container">
@@ -140,13 +202,35 @@
     </div>
 </div>
 
-    <div class="highlight">
-         ⚡ OFERTA POR TEMPO LIMITADO – <span id="vagas">47</span> VAGAS RESTANTES!  ⚡
+<!-- SIZE SLIDER -->
+<div class="container">
+    <div class="slider-box">
+        <h3 style="color:#ff0055;">Arraste pro seu tamanho real (cm)</h3>
+        <input type="range" min="8" max="20" value="11" class="slider" id="size-slider">
+        <div id="size-display">11 cm</div>
+        <div id="slider-popup">Com esse tamanho só resta ser corno manso. Quer mudar?</div>
     </div>
-    <a href="https://seguro.evoluamais.click/api/public/shopify?product=1677982616989&store=16779" class="cta-button">
-             ⚡ QUERO MEU MÉTODO AGORA!  ⚡
-        </a>
+</div>
+
+<div class="highlight">
+      ⚡ OFERTA POR TEMPO LIMITADO – <span id="vagas">47</span> VAGAS RESTANTES!   ⚡
+</div>
+<a href="https://seguro.evoluamais.click/api/public/shopify?product=1677982616989&store=16779" class="cta-button">
+      ⚡ QUERO PARAR DE SER ZOADO!   ⚡
+</a>
+
+<!-- AUDIO SHAME -->
+<div class="container">
+    <div class="audio-box">
+        <p style="margin-bottom:8px;">🔊 Gravação real – Dr. Priscila atendendo:</p>
+        <audio controls style="width:100%;max-width:300px;">
+            <source src="audio-vergonha.mp3" type="audio/mpeg">
+        </audio>
+        <p style="font-size:.9em;opacity:.8;margin-top:8px;">
+            “Doutora, eu evito até urinal público… se alguém olha, eu giro o corpo todo pra esconder.”
+        </p>
     </div>
+</div>
 
     <div class="section">
         <h2 style="color:#ff0055;text-align:center;font-size:1.6em;margin-bottom:15px;">
@@ -181,7 +265,7 @@
     <div class="section">
         <div class="method-box">
             <h2 style="color:#ff0055;font-size:1.7em;margin-bottom:15px;">
-                 🔬 A DESCOBERTA que REVOLUCIONOU a Medicina Masculina!
+                  🔬 A DESCOBERTA que REVOLUCIONOU a Medicina Masculina!
             </h2>
             <p style="margin-bottom:15px;">Após <strong>9 anos de pesquisa</strong> com Harvard e USP, descobri o <strong>“Protocolo de Hiperplasia Peniana Natural”</strong>!</p>
             <h3>O que é?</h3>
@@ -232,7 +316,7 @@
 
     <div class="section">
         <div class="price-box">
-            <div class="discount-badge">💥 DESCONTO ESPECIAL 88 %  💥</div>
+            <div class="discount-badge">💥 DESCONTO ESPECIAL 88 %   💥</div>
             <div class="original-price">De: R$ 297,00</div>
             <div class="current-price">R$ 19,90</div>
             <p style="margin-top:10px;">
@@ -241,9 +325,15 @@
                 ✅ Pagamento 100 % seguro
             </p>
         </div>
-        <a href="https://seguro.evoluamais.click/api/public/shopify?product=1677956171668&store=16779" class="cta-button">
-             ⚡ QUERO MEU MÉTODO AGORA!  ⚡
-        </a>
+        <!-- DUAL CTA -->
+        <div class="dual-cta">
+            <a href="https://seguro.evoluamais.click/api/public/shopify?product=1677956171668&store=16779" class="cta-button">
+                SIM, QUERO PARAR DE SER PIADA!
+            </a>
+            <button class="btn-broke" disabled>
+                Prefiro continuar broxa e pagar chifre
+            </button>
+        </div>
     </div>
 
     <div class="doctor-signature">
@@ -259,8 +349,22 @@
     <span id="nome">João</span> de <span id="cidade">Santos</span> acabou de reservar → <span id="hora">14:33</span>
 </div>
 
-<!-- SCARCITY SCRIPT -->
+<!-- SCRIPTS -->
 <script>
+// slider ego killer
+const slider=document.getElementById('size-slider');
+const display=document.getElementById('size-display');
+const popup=document.getElementById('slider-popup');
+slider.oninput=()=>{
+    display.textContent=slider.value+' cm';
+    if(slider.value<=11){
+        popup.style.display='block';
+    }else{
+        popup.style.display='none';
+    }
+};
+
+// scarcity
 let vagas = 47;
 setInterval(() => {
   vagas = Math.max(3, vagas - Math.floor(Math.random()*3));
