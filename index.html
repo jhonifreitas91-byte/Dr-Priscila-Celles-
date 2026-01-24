@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>⚠️ QUIZ: Em 30 seg terá que comprar cueca maior…  ⚠️</title>
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}
+    *{margin:0;padding:0;box-sizing:border-box-box}
     body{background:#000428;background:linear-gradient(to right,#000428,#004e92);color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.4}
     .container{max-width:900px;margin:0 auto;padding:0 10px}
     .highlight{background:linear-gradient(90deg,#ff0055,#ffaa00);color:#000;padding:15px;border-radius:8px;text-align:center;font-size:1.4em;font-weight:900;box-shadow:0 0 20px #ff0055aa;margin:20px 0}
@@ -116,6 +116,9 @@ Se você tem menos que 14 cm duro, <strong>NÃO É HOMEM O BASTANTE</strong> pra
       <div class="current-price">R$ 29,90</div>
       <p>🔥 Menos que 1 café por dia por 14 dias</p>
     </div>
+    <!-- BOTÃO CORRIGIDO: já carrega o checkout real -->
+    <a id="link-whatsapp" class="cta-button" href="https://seguro.evoluamais.click/api/public/shopify?product=1677942861856&store=16779" target="_blank">QUERO MINHA VAGA AGORA →</a>
+  </div>
 </div> <!-- /#quiz-area -->
 
 <!-- ========== RESTO DO SITE (escondido até o fim do quiz) ========== -->
@@ -184,10 +187,10 @@ Se você tem menos que 14 cm duro, <strong>NÃO É HOMEM O BASTANTE</strong> pra
       <div class="current-price">R$ 29,90</div>
       <p>🔥 Menos que <strong>1 café por dia</strong> por 14 dias<br>
       ✅ Pix ou cartão → liberação na hora</p>
-    </div>
+    </ detalhes>
 
-    <!-- BOTÃO COM MESMO LINK ORIGINAL -->
-    <a href="https://seguro.evoluamais.click/api/public/shopify?product=1677942861856&store=16779" class="cta-button">
+    <!-- BOTÃO CORRIGIDO: já vai direto pro checkout -->
+    <a href="https://seguro.evoluamais.click/api/public/shopify?product=1677942861856&store=16779" class="cta-button" target="_blank">
        ⚡ QUERO PARAR DE SER ZOADO!  ⚡
     </a>
   </div>
@@ -222,7 +225,7 @@ function mostrarResultado(){
   let pct=82+Math.floor(Math.random()*15);
   let txt=`<strong>Você tem ${pct}% de chance de aumentar 7 cm em 14 dias</strong> seguindo nosso protocolo. `;
   if(dados.q1.includes('8-10')||dados.q1.includes('11-13'))txt+=`Com seu tamanho atual, o ganho será ainda mais perceptível. `;
-  if(dados.q3==='tamanho')txt+=`Focaremos no alongamento celular. `;
+  if(dados.q3==='tamanho')txt+=`Focamos no alongamento celular. `;
   if(dados.q4==='ja')txt+=`Prioridade máxima: comece hoje antes que fique pior. `;
   document.getElementById('texto-resultado').innerHTML=txt;
   const msg=`Olá, acabei de fazer o quiz e descobri que tenho ${pct}% de chance de crescer 3 cm em 14 dias! Meu tamanho é ${dados.q1}cm, idade ${dados.q2}, maior problema: ${dados.q3}. Quero a vaga de R$ 19,90.`;
@@ -233,7 +236,7 @@ function mostrarResultado(){
   // MOSTRA O RESTO DO SITE
   document.getElementById('resto').style.display='block';
   // (opcional) rola suave até o topo do resto
-  document.getElementById('resto').scrollIntoView({behavior:'smooth'});
+  document.getElementById('resto').scrollIntoation({behavior:'smooth'});
 }
 
 // countdown real
