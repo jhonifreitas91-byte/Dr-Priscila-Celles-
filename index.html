@@ -24,8 +24,8 @@
     .respostas input:checked+label{background:#ff0055;color:#000;font-weight:900}
     .resultado{display:none;text-align:center}
     #progress-quiz{background:#444;border-radius:10px;height:20px;margin:15px auto;max-width:300px;overflow:hidden}
-    #progress-bar-quiz{background:#ff0055;height:100%;border-radius:10px;width:0;transition:width .3s}
-    .testimonial{background:rgba(255,255,255,.1);color:#eee;margin:15px 0;padding:15px;border-radius:10px}
+    #progress-bar-quiz{background:#ff0055;height:100%;border-radius:10px;width:0;transitionwidth .3s}
+    .testemunho{background:rgba(255,255,255,.1);color:#eee;margin:15px 0;padding:15px;border-radius:10px}
     .stars{color:#ff0055;font-size:1.3em}
     .print-box{background:#000;border:2px solid #ff0055;padding:15px;border-radius:10px;margin:20px 0;text-align:center}
     .print-title{color:#ff0055;font-size:1.3em;font-weight:900;margin-bottom:12px}
@@ -35,6 +35,11 @@
     #countdown{font-size:2em;font-weight:900;color:#0f0}
     #progress{background:#444;border-radius:10px;height:20px;margin:15px auto;max-width:300px;overflow:hidden}
     #progress-bar{background:#ff0055;height:100%;border-radius:10px;width:100%;transition:width 1s}
+    /* novo bloco */
+    .descoberta-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:25px;margin:25px 0;text-align:center}
+    .descoberta-box h2{color:#ff0055;font-size:1.5em;margin-bottom:10px}
+    .descoberta-box h3{color:#00ff87;font-size:1.2em;margin:15px 0 8px}
+    .descoberta-box p{line-height:1.5;margin-bottom:8px}
   </style>
 </head>
 <body>
@@ -88,7 +93,7 @@ Se você tem menos que 14 cm duro, <strong>NÃO É HOMEM O BASTANTE</strong> pra
       <label><input type="radio" name="q3" value="erecao">Dificuldade de ereção</label>
       <label><input type="radio" name="q3" value="ejaculacao">Ejaculação precoce</label>
       <label><input type="radio" name="q3" value="confianca">Falta de confiança</label>
-    </div>
+    </凑
     <button class="cta-button" onclick="irPergunta(4)">PRÓXIMA →</button>
     <div id="progress-quiz"><div id="progress-bar-quiz" style="width:75%"></div></div>
   </div>
@@ -123,6 +128,20 @@ Se você tem menos que 14 cm duro, <strong>NÃO É HOMEM O BASTANTE</strong> pra
 
 <!-- ========== RESTO DO SITE (escondido até o fim do quiz) ========== -->
 <div id="resto" style="display:none">
+
+  <!-- ========== BLOCO: A DESCOBERTA QUE REVOLUCIONOU ========== -->
+  <div class="descoberta-box">
+    <h2>A DESCOBERTA que REVOLUCIONOU a Medicina Masculina!</h2>
+    <p>Após <strong>9 anos de pesquisa</strong> com Harvard e USP, descobri o <strong>“Protocolo de Hiperplasia Peniana Natural”</strong>!</p>
+    <h3>O que é?</h3>
+    <p>
+      ✅ <strong>Método 100 % natural</strong> – 23 exercícios e técnicas comprovadas<br>
+      ✅ Ativa <strong>receptores de crescimento celular</strong> do corpo cavernoso<br>
+      ✅ <strong>Estimulação hormonal natural</strong> – aumenta comprimento e grossura<br>
+      ✅ Resultados em apenas <strong>14 dias úteis</strong><br>
+      ✅ <strong>Aprovado pela ANVISA</strong> – Registro 9.842021/2021
+    </p>
+  </div>
 
   <div class="section" style="margin-top:40px">
     <h2 style="color:#ff0055;text-align:center;font-size:1.6em;margin-bottom:15px">💬 Transformações REAIS depois do protocolo!</h2>
@@ -162,7 +181,7 @@ Se você tem menos que 14 cm duro, <strong>NÃO É HOMEM O BASTANTE</strong> pra
       <p class="print-user">@biel_x → Começou dia 01/01/2026</p>
       <img src="print3.jpg" class="print-img" alt="Print 3">
       <p class="print-user">@edu_rhs → Começou dia 23/12/2025</p>
- uncompromised</div>
+    </div>
   </div>
 
   <div class="audio-box">
@@ -226,7 +245,7 @@ function mostrarResultado(){
   if(dados.q3==='tamanho')txt+=`Focamos no alongamento celular. `;
   if(dados.q4==='ja')txt+=`Prioridade máxima: comece hoje antes que fique pior. `;
   document.getElementById('texto-resultado').innerHTML=txt;
-  const msg=`Olá, acabei de fazer o quiz e descubri que tenho ${pct}% de chance de crescer 3 cm em 14 dias! Meu tamanho é ${dados.q1}cm, idade ${dados.q2}, maior problema: ${dados.q3}. Quero a vaga de R$ 19,90.`;
+  const msg=`Olá, acabei de fazer o quiz e descobri que tenho ${pct}% de chance de crescer 3 cm em 14 dias! Meu tamanho é ${dados.q1}cm, idade ${dados.q2}, maior problema: ${dados.q3}. Quero a vaga de R$ 19,90.`;
   const zap=`https://seguro.evoluamais.click/checkout/Z-24GIK01SR126?text=${encodeURIComponent(msg)}`;
   document.getElementById('link-whatsapp').href=zap;
   document.getElementById('q4').style.display='none';
