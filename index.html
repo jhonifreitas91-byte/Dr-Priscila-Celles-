@@ -3,44 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>⚠️ CUIDADO! Em 2 semanas sua cueca vai ficar TÃO APERTADA que você vai precisar comprar outra…   ⚠️</title>
+    <title>⚠️ CUIDADO! Em 2 semanas sua cueca vai ficar TÃO APERTADA que você vai precisar comprar outra…  ⚠️</title>
     <style>
         *{margin:0;padding:0;box-sizing:border-box;}
-        body{background:#000428;background:linear-gradient(to right,#000428,#004e92);color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.4;}
-        .container{max-width:900px;margin:0 auto;padding:0 10px;}
-        .header{text-align:center;padding:20px 0 10px;}
-        .header h1{font-size:clamp(1.4em,5vw,2.2em);text-shadow:0 0 8px #ff0055;margin-bottom:10px;}
-        .header p{font-size:1.1em;opacity:.8;}
-        .section{background:rgba(255,255,255,.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);margin:25px 0;padding:25px;border-radius:12px;}
-        .highlight{background:linear-gradient(90deg,#ff0055,#ffaa00);color:#000;padding:15px;border-radius:8px;text-align:center;font-size:1.4em;font-weight:900;box-shadow:0 0 20px #ff0055aa;margin:20px 0;}
-        .stats{background:rgba(255,255,255,.1);border-left:4px solid #ff0055;padding:15px;margin:15px 0;}
-        .method-box{background:rgba(0,0,0,.25);border:2px solid #ff0055;padding:25px;border-radius:12px;text-align:center;}
-        .testimonial{background:rgba(255,255,255,.1);color:#eee;margin:15px 0;padding:15px;border-radius:10px;}
-        .stars{color:#ff0055;font-size:1.3em;}
-        .cta-button{background:linear-gradient(90deg,#00ff87,#00d4ff);color:#000;padding:18px 35px;font-size:1.4em;font-weight:900;border:none;border-radius:30px;cursor:pointer;display:block;margin:25px auto;text-decoration:none;text-align:center;max-width:400px;box-shadow:0 0 20px #00ff87aa;transition:transform .2s;}
-        .cta-button:hover{transform:scale(1.05);}
-        .price-box{background:#ff0055;color:#fff;padding:25px;border-radius:12px;text-align:center;box-shadow:0 0 25px #ff005599;}
-        .original-price{text-decoration:line-through;opacity:.7;}
-        .current-price{font-size:2.5em;font-weight:900;}
-        .discount-badge{background:#ff0;color:#000;padding:6px 12px;border-radius:15px;font-weight:900;display:inline-block;margin:8px 0;}
-        .doctor-signature{text-align:center;margin:30px 0 10px;font-size:.8em;opacity:.7;}
-        #live-proof{position:fixed;bottom:15px;left:15px;background:#111;color:#0f0;font-family:monospace;font-size:12px;padding:8px 12px;border-radius:6px;z-index:9999;box-shadow:0 0 10px #0f0aa;}
-        .ego-killer{background:#ff0055;color:#fff;text-align:center;padding:12px;font-size:1.3em;font-weight:900;text-shadow:0 0 4px #000;}
-        .slider-box{background:#000;border:2px solid #ff0055;padding:20px;border-radius:10px;text-align:center;margin:20px 0;}
-        .slider{width:80%;margin:10px auto;display:block;}
-        #size-display{font-size:2em;color:#ff0055;font-weight:900;}
-        #slider-popup{display:none;background:#ff0055;color:#fff;padding:15px;border-radius:8px;margin-top:15px;font-weight:900;}
-        .dual-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-        .btn-broke{background:#444;color:#aaa;padding:15px 25px;border-radius:25px;font-size:1em;cursor:not-allowed;opacity:.7;}
-        .audio-box{background:rgba(255,255,255,.05);border-left:4px solid #ff0055;padding:15px;margin:15px 0;text-align:center;}
-        /* ==== NOVOS BLOCOS ==== */
-        .print-box{background:#000;border:2px solid #ff0055;padding:15px;border-radius:10px;margin:20px 0;text-align:center;}
-        .print-title{color:#ff0055;font-size:1.3em;font-weight:900;margin-bottom:12px;}
-        .print-img{width:100%;max-width:280px;border-radius:6px;margin:8px auto;display:block;}
-        .print-user{color:#0f0;font-size:.9em;margin-top:6px;}
-        #countdown{font-size:2em;font-weight:900;color:#0f0;}
-        #progress{background:#444;border-radius:10px;height:20px;margin:15px auto;max-width:300px;overflow:hidden;}
-        #progress-bar{background:#ff0055;height:100%;border-radius:10px;width:100%;transition:width 1s;}
+        body {
+            background: #ffffff;
+            color: #111;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0 10px;
+        }
+        .header h1 {
+            font-size: clamp(1.6em, 5vw, 2.4em);
+            color: #ff0055;
+            margin-bottom: 10px;
+        }
+        .section {
+            background: #ffffff;
+            border: 1px solid #ff0055;
+            margin: 25px 0;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(255,0,85,.1);
+        }
+        .highlight {
+            background: #ff0055;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: 900;
+            box-shadow: 0 0 20px rgba(255,0,85,.25);
+            margin: 20px 0;
+        }
+        .stats {
+            border-left: 4px solid #ff0055;
+            padding: 15px;
+            margin: 15px 0;
+            background: #fff0f5;
+        }
+        .method-box {
+            background: #ffffff;
+            border: 2px solid #ff0055;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .testimonial {
+            background: #ffffff;
+            border: 1px solid #ff0055;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .stars {
+            color: #ff0055;
+            font-size: 1.3em;
+        }
+        .cta-button {
+            background: #ff0055;
+            color: #fff;
+            padding: 18px 35px;
+            font-size: 1.4em;
+            font-weight: 900;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            display: block;
+            margin: 25px auto;
+            text-decoration: none;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 0 20px rgba(255,0,85,.3);
+            transition: .2s;
+        }
+        .cta-button:hover {
+            background: #ffffff;
+            color: #ff0055;
+            border: 2px solid #ff0055;
+            transform: scale(1.05);
+        }
+        .price-box {
+            background: #ffffff;
+            border: 2px solid #ff0055;
+            color: #111;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 25px rgba(255,0,85,.15);
+        }
+        .original-price {
+            text-decoration: line-through;
+            opacity: .6;
+        }
+        .current-price {
+            font-size: 2.5em;
+            font-weight: 900;
+            color: #ff0055;
+        }
+        .discount-badge {
+            background: #ff0055;
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-weight: 900;
+            display: inline-block;
+            margin: 8px 0;
+        }
+        .doctor-signature {
+            text-align: center;
+            margin: 30px 0 10px;
+            font-size: .8em;
+            opacity: .7;
+        }
+        #live-proof {
+            position: fixed;
+            bottom: 15px;
+            left: 15px;
+            background: #ffffff;
+            color: #ff0055;
+            font-family: monospace;
+            font-size: 12px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            z-index: 9999;
+            box-shadow: 0 0 10px rgba(255,0,85,.2);
+        }
+        .ego-killer {
+            background: #ff0055;
+            color: #fff;
+            text-align: center;
+            padding: 12px;
+            font-size: 1.3em;
+            font-weight: 900;
+        }
+        .slider-box {
+            background: #ffffff;
+            border: 2px solid #ff0055;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .slider {
+            width: 80%;
+            margin: 10px auto;
+            display: block;
+        }
+        #size-display {
+            font-size: 2em;
+            color: #ff0055;
+            font-weight: 900;
+        }
+        #slider-popup {
+            display: none;
+            background: #ff0055;
+            color: #fff;
+            padding: 15px;
+            border-radius: ;
+            margin-top: 15px;
+            font-weight: 900;
+        }
+        .dual-cta {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-broke {
+            background: #ffffff;
+            color: #ccc;
+            padding: 15px 25px;
+            border: 1px solid #ccc;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: not-allowed;
+            opacity: .7;
+        }
+        .audio-box {
+            background: #fff0f5;
+            border-left: 4px solid #ff0055;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        .print-box {
+            background: #ffffff;
+            border: 2px solid #ff0055;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .print-title {
+            color: #ff0055;
+            font-size: 1.3em;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+        .print-img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 6px;
+            margin: 8px auto;
+            display: block;
+        }
+        .print-user {
+            color: #ff0055;
+            font-size: .9em;
+            margin-top: 6px;
+        }
+        #countdown {
+            font-size: 2em;
+            font-weight: 900;
+            color: #ff0055;
+        }
+        #progress {
+            background: #ff0055;
+            border-radius: 10px;
+            height: 20px;
+            margin: 15px auto;
+            max-width: 300px;
+            overflow: hidden;
+        }
+        #progress-bar {
+            background: #ffffff;
+            height: 100%;
+            border-radius: 10px;
+            width: 100%;
+            transition: width 1s;
+        }
     </style>
 </head>
 <body>
@@ -52,7 +253,7 @@
 <div class="container">
     <div style="text-align:center;margin:15px 0;">
         <img src="foto-dra-priscila.PNG" alt="Dr. Priscila Celles" style="width:200px;height:200px;border-radius:50%;object-fit:cover;">
-        <p style="margin-top:8px;font-weight:900;color:#fff;">ATENÇÃO! NÃO VENDEMOS REMÉDIO! MÉTODO NATURAL: EXERCÍCIOS + TÉCNICAS + ALIMENTAÇÃO!</p>
+        <p style="margin-top:8px;font-weight:900;color:#ff0055;">ATENÇÃO! NÃO VENDEMOS REMÉDIO! MÉTODO NATURAL: EXERCÍCIOS + TÉCNICAS + ALIMENTAÇÃO!</p>
     </div>
 </div>
 
@@ -66,10 +267,10 @@
 </div>
 
 <div class="highlight">
-      ⚡ OFERTA POR TEMPO LIMITADO – <span id="vagas">47</span> VAGAS RESTANTES!   ⚡
+       ⚡ OFERTA POR TEMPO LIMITADO – <span id="vagas">47</span> VAGAS RESTANTES!  ⚡
 </div>
 <a href="https://seguro.evoluamais.click/api/public/shopify?product=1677948565156&store=16779" class="cta-button">
-      ⚡ QUERO PARAR DE SER ZOADO!   ⚡
+       ⚡ QUERO PARAR DE SER ZOADO!  ⚡
 </a>
 
 <div class="container">
@@ -91,7 +292,7 @@
         <div class="stats">
             <h3>📊 Dados que a ciência confirma:</h3>
             <p><strong>89 % dos homens brasileiros</strong> não estão satisfeitos com o próprio pênis.</p>
-            <p><strong>94 %</strong> já tentaram métodos perigosos ou ineficazes.</p>
+            <p><strong>94 %</strong> já tentaram métodos perigosos ou ineficazeses.</p>
             <p><strong>81 %</strong> evitam relacionamentos por insegurança.</p>
             <p><strong>7 em cada 10</strong> evitam praias/piscinas por vergonha.</p>
         </div>
@@ -117,7 +318,7 @@
     <div class="section">
         <div class="method-box">
             <h2 style="color:#ff0055;font-size:1.7em;margin-bottom:15px;">
-                  🔬 A DESCOBERTA que REVOLUCIONOU a Medicina Masculina!
+                   🔬 A DESCOBERTA que REVOLUCIONOU a Medicina Masculina!
             </h2>
             <p style="margin-bottom:15px;">Após <strong>9 anos de pesquisa</strong> com Harvard e USP, descobri o <strong>“Protocolo de Hiperplasia Peniana Natural”</strong>!</p>
             <h3>O que é?</h3>
@@ -168,7 +369,7 @@
             <div class="print-box">
                 <div class="print-title">📱 PRINTS ENVIADOS NO NOSSO DIRECT</div>
                 <img src="print1.jpg" class="print-img" alt="Print 1">
-        <p class="print-user">@leo_spz → Começou dia 15/01/2026</p>
+        <p class="print-user">@leo_spz → Começou dia </p>
         <img src="print2.jpg" class="print-img" alt="Print 2">
         <p class="print-user">@biel_x → Começou dia 01/01/2026</p>
         <img src="print3.jpg" class="print-img" alt="Print 3">
@@ -183,7 +384,7 @@
                 <div class="original-price">De: R$ 69,90</div>
                 <div class="current-price">R$ 6,99</div>
                 <p style="margin-top:10px;font-size:1.1em;">
-                    🔥 Menos que <strong>1 café por dia</strong> por 14 dias<br>
+                     🔥 Menos que <strong>1 café por dia</strong> por 14 dias<br>
                     ✅ Pix ou cartão → liberação na hora
                 </p>
             </div>
@@ -201,7 +402,7 @@
 
     <div class="section">
         <div class="price-box">
-            <div class="discount-badge">💥 DESCONTO ESPECIAL 90 %   💥</div>
+            <div class="discount-badge">💥 DESCONTO ESPECIAL 90 %  💥</div>
             <div class="original-price">De: R$ 69,90</div>
             <div class="current-price">R$ 6,99</div>
             <p style="margin-top:10px;">
