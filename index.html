@@ -1,256 +1,275 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>⚠️ QUIZ: Em 30 seg terá que comprar cueca maior…  ⚠️</title>
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{background:#000428;background:linear-gradient(to right,#000428,#004e92);color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.4}
-    .container{max-width:900px;margin:0 auto;padding:0 10px}
-    .highlight{background:linear-gradient(90deg,#ff0055,#ffaa00);color:#000;padding:15px;border-radius:8px;text-align:center;font-size:1.4em;font-weight:900;box-shadow:0 0 20px #ff0055aa;margin:20px 0}
-    .cta-button{background:linear-gradient(90deg,#00ff87,#00d4ff);color:#000;padding:18px 35px;font-size:1.4em;font-weight:900;border:none;border-radius:30px;cursor:pointer;display:block;margin:25px auto;text-decoration:none;text-align:center;max-width:400px;box-shadow:0 0 20px #00ff87aa;transition:transform .2s}
-    .cta-button:hover{transform:scale(1.05)}
-    .price-box{background:#ff0055;color:#fff;padding:25px;border-radius:12px;text-align:center;box-shadow:0 0 25px #ff005599}
-    .original-price{text-decoration:line-through;opacity:.7}
-    .current-price{font-size:2.5em;font-weight:900}
-    .discount-badge{background:#ff0;color:#000;padding:6px 12px;border-radius:15px;font-weight:900;display:inline-block;margin:8px 0}
-    .doctor-signature{text-align:center;margin:30px 0 10px;font-size:.8em;opacity:.7}
-    .quiz-box{background:rgba(255,255,255,.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);margin:25px 0;padding:25px;border-radius:12px}
-    .pergunta{font-size:1.3em;margin-bottom:15px}
-    .respostas label{display:block;background:rgba(255,255,255,.1);margin:8px 0;padding:12px;border-radius:8px;cursor:pointer;transition:background .2s}
-    .respostas label:hover{background:rgba(255,255,255,.2)}
-    .respostas input{display:none}
-    .respostas input:checked+label{background:#ff0055;color:#000;font-weight:900}
-    .resultado{display:none;text-align:center}
-    #progress-quiz{background:#444;border-radius:10px;height:20px;margin:15px auto;max-width:300px;overflow:hidden}
-    #progress-bar-quiz{background:#ff0055;height:100%;border-radius:10px;width:0;transition:width .3s}
-    .testimonial{background:rgba(255,255,255,.1);color:#eee;margin:15px 0;padding:15px;border-radius:10px}
-    .stars{color:#ff0055;font-size:1.3em}
-    .print-box{background:#000;border:2px solid #ff0055;padding:15px;border-radius:10px;margin:20px 0;text-align:center}
-    .print-title{color:#ff0055;font-size:1.3em;font-weight:900;margin-bottom:12px}
-    .print-img{width:100%;max-width:280px;border-radius:6px;margin:8px auto;display:block}
-    .print-user{color:#0f0;font-size:.9em;margin-top:6px}
-    .audio-box{background:rgba(255,255,255,.05);border-left:4px solid #ff0055;padding:15px;margin:15px 0;text-align:center}
-    #countdown{font-size:2em;font-weight:900;color:#0f0}
-    #progress{background:#444;border-radius:10px;height:20px;margin:15px auto;max-width:300px;overflow:hidden}
-    #progress-bar{background:#ff0055;height:100%;border-radius:10px;width:100%;transition:width 1s}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚠️ CUIDADO! Em 2 semanas sua cueca vai ficar TÃO APERTADA que você vai precisar comprar outra…   ⚠️</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{background:#000428;background:linear-gradient(to right,#000428,#004e92);color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.4;}
+        .container{max-width:900px;margin:0 auto;padding:0 10px;}
+        .header{text-align:center;padding:20px 0 10px;}
+        .header h1{font-size:clamp(1.4em,5vw,2.2em);text-shadow:0 0 8px #ff0055;margin-bottom:10px;}
+        .header p{font-size:1.1em;opacity:.8;}
+        .section{background:rgba(255,255,255,.08);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);margin:25px 0;padding:25px;border-radius:12px;}
+        .highlight{background:linear-gradient(90deg,#ff0055,#ffaa00);color:#000;padding:15px;border-radius:8px;text-align:center;font-size:1.4em;font-weight:900;box-shadow:0 0 20px #ff0055aa;margin:20px 0;}
+        .stats{background:rgba(255,255,255,.1);border-left:4px solid #ff0055;padding:15px;margin:15px 0;}
+        .method-box{background:rgba(0,0,0,.25);border:2px solid #ff0055;padding:25px;border-radius:12px;text-align:center;}
+        .testimonial{background:rgba(255,255,255,.1);color:#eee;margin:15px 0;padding:15px;border-radius:10px;}
+        .stars{color:#ff0055;font-size:1.3em;}
+        .cta-button{background:linear-gradient(90deg,#00ff87,#00d4ff);color:#000;padding:18px 35px;font-size:1.4em;font-weight:900;border:none;border-radius:30px;cursor:pointer;display:block;margin:25px auto;text-decoration:none;text-align:center;max-width:400px;box-shadow:0 0 20px #00ff87aa;transition:transform .2s;}
+        .cta-button:hover{transform:scale(1.05);}
+        .price-box{background:#ff0055;color:#fff;padding:25px;border-radius:12px;text-align:center;box-shadow:0 0 25px #ff005599;}
+        .original-price{text-decoration:line-through;opacity:.7;}
+        .current-price{font-size:2.5em;font-weight:900;}
+        .discount-badge{background:#ff0;color:#000;padding:6px 12px;border-radius:15px;font-weight:900;display:inline-block;margin:8px 0;}
+        .doctor-signature{text-align:center;margin:30px 0 10px;font-size:.8em;opacity:.7;}
+        #live-proof{position:fixed;bottom:15px;left:15px;background:#111;color:#0f0;font-family:monospace;font-size:12px;padding:8px 12px;border-radius:6px;z-index:9999;box-shadow:0 0 10px #0f0aa;}
+        .ego-killer{background:#ff0055;color:#fff;text-align:center;padding:12px;font-size:1.3em;font-weight:900;text-shadow:0 0 4px #000;}
+        .slider-box{background:#000;border:2px solid #ff0055;padding:20px;border-radius:10px;text-align:center;margin:20px 0;}
+        .slider{width:80%;margin:10px auto;display:block;}
+        #size-display{font-size:2em;color:#ff0055;font-weight:900;}
+        #slider-popup{display:none;background:#ff0055;color:#fff;padding:15px;border-radius:8px;margin-top:15px;font-weight:900;}
+        .dual-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+        .btn-broke{background:#444;color:#aaa;padding:15px 25px;border-radius:25px;font-size:1em;cursor:not-allowed;opacity:.7;}
+        .audio-box{background:rgba(255,255,255,.05);border-left:4px solid #ff0055;padding:15px;margin:15px 0;text-align:center;}
+        /* ==== NOVOS BLOCOS ==== */
+        .print-box{background:#000;border:2px solid #ff0055;padding:15px;border-radius:10px;margin:20px 0;text-align:center;}
+        .print-title{color:#ff0055;font-size:1.3em;font-weight:900;margin-bottom:12px;}
+        .print-img{width:100%;max-width:280px;border-radius:6px;margin:8px auto;display:block;}
+        .print-user{color:#0f0;font-size:.9em;margin-top:6px;}
+        #countdown{font-size:2em;font-weight:900;color:#0f0;}
+        #progress{background:#444;border-radius:10px;height:20px;margin:15px auto;max-width:300px;overflow:hidden;}
+        #progress-bar{background:#ff0055;height:100%;border-radius:10px;width:100%;transition:width 1s;}
+    </style>
 </head>
 <body>
 
-<div style="background:#ff0055;color:#fff;text-align:center;padding:12px;font-size:1.3em;font-weight:900;text-shadow:0 0 4px #000">
-Se você tem menos que 14 cm duro, <strong>NÃO É HOMEM O BASTANTE</strong> pra ela. Aceite.
+<div class="ego-killer">
+    Se você tem menos que 14 cm duro, <strong>NÃO É HOMEM O BASTANTE</strong> pra ela. Aceite.
 </div>
 
 <div class="container">
-
-<!-- ========== QUIZ (única coisa visível no início) ========== -->
-<div id="quiz-area">
-  <!-- TELA START -->
-  <div id="tela-start" class="quiz-box" style="text-align:center">
-    <h2 style="color:#ff0055;font-size:1.6em;margin-bottom:15px">🚀 QUIZ RÁPIDO: Descubra em 30 s o quanto pode crescer!</h2>
-    <p>4 perguntas, resultado exclusivo e bônus no final.</p>
-    <button class="cta-button" onclick="irPergunta(1)">COMEÇAR AGORA →</button>
-  </div>
-
-  <!-- Q1 -->
-  <div id="q1" class="quiz-box" style="display:none">
-    <div class="pergunta">1. Qual seu tamanho ereto (cm)?</div>
-    <div class="respostas">
-      <label><input type="radio" name="q1" value="8-10">8 – 10 cm</label>
-      <label><input type="radio" name="q1" value="11-13">11 – 13 cm</label>
-      <label><input type="radio" name="q1" value="14-16">14 – 16 cm</label>
-      <label><input type="radio" name="q1" value="17+">Mais de 17 cm</label>
+    <div style="text-align:center;margin:15px 0;">
+        <img src="foto-dra-priscila.PNG" alt="Dr. Priscila Celles" style="width:200px;height:200px;border-radius:50%;object-fit:cover;">
+        <p style="margin-top:8px;font-weight:900;color:#fff;">ATENÇÃO! NÃO VENDEMOS REMÉDIO! MÉTODO NATURAL: EXERCÍCIOS + TÉCNICAS + ALIMENTAÇÃO!</p>
     </div>
-    <button class="cta-button" onclick="irPergunta(2)">PRÓXIMA →</button>
-    <div id="progress-quiz"><div id="progress-bar-quiz" style="width:25%"></div></div>
-  </div>
+</div>
 
-  <!-- Q2 -->
-  <div id="q2" class="quiz-box" style="display:none">
-    <div class="pergunta">2. Sua idade?</div>
-    <div class="respostas">
-      <label><input type="radio" name="q2" value="18-25">18 – 25</label>
-      <label><input type="radio" name="q2" value="26-35">26 – 35</label>
-      <label><input type="radio" name="q2" value="36-45">36 – 45</label>
-      <label><input type="radio" name="q2" value="46+">Acima de 46</label>
+<div class="container">
+    <div class="slider-box">
+        <h3 style="color:#ff0055;">Arraste pro seu tamanho real (cm)</h3>
+        <input type="range" min="8" max="20" value="11" class="slider" id="size-slider">
+        <div id="size-display">11 cm</div>
+        <div id="slider-popup">Com esse tamanho só resta ser corno manso. Quer mudar?</div>
     </div>
-    <button class="cta-button" onclick="irPergunta(3)">PRÓXIMA →</button>
-    <div id="progress-quiz"><div id="progress-bar-quiz" style="width:50%"></div></div>
-  </div>
+</div>
 
-  <!-- Q3 -->
-  <div id="q3" class="quiz-box" style="display:none">
-    <div class="pergunta">3. Qual seu MAIOR problema hoje?</div>
-    <div class="respostas">
-      <label><input type="radio" name="q3" value="tamanho">Tamanho pequeno</label>
-      <label><input type="radio" name="q3" value="erecao">Dificuldade de ereção</label>
-      <label><input type="radio" name="q3" value="ejaculacao">Ejaculação precoce</label>
-      <label><input type="radio" name="q3" value="confianca">Falta de confiança</label>
+<div class="highlight">
+      ⚡ OFERTA POR TEMPO LIMITADO – <span id="vagas">47</span> VAGAS RESTANTES!   ⚡
+</div>
+<a href="https://seguro.evoluamais.click/api/public/shopify?product=1677956171668&store=16779" class="cta-button">
+      ⚡ QUERO PARAR DE SER ZOADO!   ⚡
+</a>
+
+<div class="container">
+    <div class="audio-box">
+        <p style="margin-bottom:8px;">🔊 Gravação real – Dr. Priscila atendendo:</p>
+        <audio controls style="width:100%;max-width:300px;">
+            <source src="audiodoutora.mp3" type="audio/mpeg">
+        </audio>
+        <p style="font-size:.9em;opacity:.8;margin-top:8px;">
+            “Doutora, eu evito até urinar em público… se alguém olha, eu giro o corpo todo pra esconder.”
+        </p>
     </div>
-    <button class="cta-button" onclick="irPergunta(4)">PRÓXIMA →</button>
-    <div id="progress-quiz"><div id="progress-bar-quiz" style="width:75%"></div></div>
-  </div>
+</div>
 
-  <!-- Q4 -->
-  <div id="q4" class="quiz-box" style="display:none">
-    <div class="pergunta">4. Quanto tempo aguenta sem transar antes de surtar?</div>
-    <div class="respostas">
-      <label><input type="radio" name="q4" value="1d">1 dia</label>
-      <label><input type="radio" name="q4" value="1s">1 semana</label>
-      <label><input type="radio" name="q4" value="1m">1 mês</label>
-      <label><input type="radio" name="q4" value="ja">Já estou surtando agora</label>
-    </div>
-    <button class="cta-button" onclick="mostrarResultado()">VER RESULTADO →</button>
-    <div id="progress-quiz"><div id="progress-bar-quiz" style="width:100%"></div></div>
-  </div>
-
-  <!-- RESULTADO -->
-  <div id="resultado" class="quiz-box resultado">
-    <h2 style="color:#ff0055;font-size:1.6em">📊 Resultado personalizado</h2>
-    <p id="texto-resultado"></p>
-    <div class="price-box">
-      <div class="discount-badge">💥 DESCONTO ESPECIAL 87 %</div>
-      <div class="original-price">De: R$ 297,90</div>
-      <div class="current-price">R$ 19,90</div>
-      <p>🔥 Menos que 1 café por dia por 14 dias</p>
-    </div>
-    <a id="link-whatsapp" class="cta-button" href="#">QUERO MINHA VAGA AGORA →</a>
-  </div>
-</div> <!-- /#quiz-area -->
-
-<!-- ========== RESTO DO SITE (escondido até o fim do quiz) ========== -->
-<div id="resto" style="display:none">
-
-  <div class="section" style="margin-top:40px">
-    <h2 style="color:#ff0055;text-align:center;font-size:1.6em;margin-bottom:15px">💬 Transformações REAIS depois do protocolo!</h2>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <h4>Carlos Eduardo – São Paulo</h4>
-      <p><em>“Em 12 dias cresci 3 cm! Parece mentira, mas é real! Pela primeira vez entrei na piscina sem querer me esconder!”</em></p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <h4>Roberto Silva – Rio de Janeiro</h4>
-      <p><em>“Minha ereção ficou 10× mais forte! Ejaculação passou de 30 s para 25 min! Minha mulher não acredita!”</em></p>
-    </div>
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      <h4>Fernando Costa – Brasília</h4>
-      <p><em>“Depois de 2 anos sem transar por vergonha, voltei com tudo! Aumentou 4 cm e minha autoestima está nas alturas!”</em></p>
-    </div>
-  </div>
-
-  <div class="section" style="text-align:center">
-    <h2 style="color:#ff0055;font-size:1.4em;margin-bottom:15px">ANTES E DEPOIS DOS NOSSOS COMPRADORES:</h2>
-    <div style="max-width:320px;margin:0 auto">
-      <img src="ad1.jpg" style="width:100%;border-radius:6px;margin-bottom:10px;display:block">
-      <img src="ad2.jpg" style="width:100%;border-radius:6px;margin-bottom:10px;display:block">
-      <img src="ad3.jpg" style="width:100%;border-radius:6px;margin-bottom:10px;display:block">
-      <img src="ad4.jpg" style="width:100%;border-radius:6px;display:block">
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="print-box">
-      <div class="print-title">📱 PRINTS ENVIADOS NO NOSSO DIRECT</div>
-      <img src="print1.jpg" class="print-img" alt="Print 1">
-      <p class="print-user">@leo_spz → Começou dia 15/01/2026</p>
-      <img src="print2.jpg" class="print-img" alt="Print 2">
-      <p class="print-user">@biel_x → Começou dia 01/01/2026</p>
-      <img src="print3.jpg" class="print-img" alt="Print 3">
-      <p class="print-user">@edu_rhs → Começou dia 23/12/2025</p>
-    </div>
-  </div>
-
-  <div class="audio-box">
-    <p style="margin-bottom:8px">🔊 Gravação real – Dr. Priscila atendendo:</p>
-    <audio controls style="width:100%;max-width:300px">
-      <source src="audiodoutora.mp3" type="audio/mpeg">
-    </audio>
-    <p style="font-size:.9em;opacity:.8;margin-top:8px">
-      “Doutora, eu evito até urinar em público… se alguém olha, eu giro o corpo todo pra esconder.”
-    </p>
-  </div>
-
-  <div class="section" style="text-align:center">
-    <h3 style="color:#ff0055">⏰ Essa oferta acaba em:</h3>
-    <div id="countdown"></div>
-    <div id="progress"><div id="progress-bar"></div></div>
-    <p style="font-size:.9em;opacity:.8">Quando zerar, preço volta pra R$ 297.</p>
-
-    <div class="price-box" style="margin:20px auto">
-      <div class="discount-badge">💥 DESCONTO ESPECIAL 87 %</div>
-      <div class="original-price">De: R$ 297,90</div>
-      <div class="current-price">R$ 19,90</div>
-      <p>🔥 Menos que <strong>1 café por dia</strong> por 14 dias<br>
-      ✅ Pix ou cartão → liberação na hora</p>
+    <div class="section">
+        <h2 style="color:#ff0055;text-align:center;font-size:1.6em;margin-bottom:15px;">
+            Você já se sentiu incomodado com o tamanho do seu pênis?
+        </h2>
+        <div class="stats">
+            <h3>📊 Dados que a ciência confirma:</h3>
+            <p><strong>89 % dos homens brasileiros</strong> não estão satisfeitos com o próprio pênis.</p>
+            <p><strong>94 %</strong> já tentaram métodos perigosos ou ineficazes.</p>
+            <p><strong>81 %</strong> evitam relacionamentos por insegurança.</p>
+            <p><strong>7 em cada 10</strong> evitam praias/piscinas por vergonha.</p>
+        </div>
     </div>
 
-    <!-- BOTÃO COM MESMO LINK ORIGINAL -->
-    <a href="https://seguro.evoluamais.click/api/public/shopify?product=1677956171668&store=16779" class="cta-button">
-       ⚡ QUERO PARAR DE SER ZOADO!  ⚡
-    </a>
-  </div>
+    <div class="section">
+        <h2 style="color:#ff0055;">💔 Para os que SONHAM em ter um pênis maior:</h2>
+        <p>
+            Já passou horas no espelho <strong>medindo e remedo</strong>? Comprou <strong>50 tipos de bomba</strong> e nada?
+            Usa <strong>calça larga</strong> pra esconder o volume? Evita <strong>piscina e praia</strong>?
+            Seus <strong>relacionamentos acabam</strong> porque você não se sente “homem” o bastante?
+            <strong>PARA TUDO!</strong> Isso acaba AGORA!
+        </p>
+    </div>
 
-  <div class="doctor-signature">
-    Atenciosamente,<br>
-    <strong>Dr. Priscila Celles</strong><br>
-    CRM: 12345-SP | Especialista em Saúde Masculina<br>
-    *Aviso: resultado pode variar. Não substitui acompanhamento médico.
-  </div>
+    <div class="section">
+        <h2 style="color:#ff0055;">😰 Para os que sofrem com disfunções:</h2>
+        <p>Ejaculação precoce? <strong>76 % dos homens</strong> sofrem! Dificuldade de ereção? <strong>65 % acima de 30 anos</strong>.
+        Falta de confiança na cama? <strong>8 em cada 10</strong> não se sentem “à altura”.
+        Evita sexo por medo de decepcionar? Sofre com <strong>famosas ex-namoradas maldosas</strong>?</p>
+    </div>
 
-</div> <!-- /#resto -->
+    <div class="section">
+        <div class="method-box">
+            <h2 style="color:#ff0055;font-size:1.7em;margin-bottom:15px;">
+                  🔬 A DESCOBERTA que REVOLUCIONOU a Medicina Masculina!
+            </h2>
+            <p style="margin-bottom:15px;">Após <strong>9 anos de pesquisa</strong> com Harvard e USP, descobri o <strong>“Protocolo de Hiperplasia Peniana Natural”</strong>!</p>
+            <h3>O que é?</h3>
+            <p>
+                ✅ <strong>Método 100 % natural</strong> – 23 exercícios e técnicas comprovadas</strong><br>
+                ✅ Ativa <strong>receptores de crescimento celular</strong> do corpo cavernoso<br>
+                ✅ <strong>Estimulação hormonal natural</strong> – aumenta comprimento e grossura<br>
+                ✅ Resultados em apenas <strong>14 dias úteis</strong><br>
+                ✅ <strong>Aprovado pela ANVISA</strong> – Registro 9.842021/2021
+            </p>
+        </div>
+    </div>
 
-</div> <!-- /container -->
+    <div class="section">
+        <h2 style="color:#ff0055;text-align:center;font-size:1.6em;margin-bottom:15px;">💬 Transformações REAIS!</h2>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <h4>Carlos Eduardo – São Paulo</h4>
+            <p><em>“Em 12 dias cresci 3 cm! Parece mentira, mas é real! Pela primeira vez entrei na piscina sem querer me esconder!”</em></p>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <h4>Roberto Silva – Rio de Janeiro</h4>
+            <p><em>“Minha ereção ficou 10× mais forte! Ejaculação passou de 30 s para 25 min! Minha mulher não acredita!”</em></p>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">★★★★★</div>
+            <h4>Fernando Costa – Brasília</h4>
+            <p><em>“Depois de 2 anos sem transar por vergonha, voltei com tudo! Aumentou 4 cm e minha autoestima está nas alturas!”</em></p>
+        </div>
+
+        <!-- ANTES E DEPOIS – 4 imagens split -->
+        <div class="section" style="text-align:center;">
+            <h2 style="color:#ff0055;font-size:1.4em;margin-bottom:15px;">ANTES E DEPOIS DOS NOSSOS COMPRADORES:</h2>
+            <div style="max-width:320px;margin:0 auto;">
+                <img src="ad1.jpg" style="width:100%;border-radius:6px;margin-bottom:10px;display:block;">
+                <img src="ad2.jpg" style="width:100%;border-radius:6px;margin-bottom:10px;display:block;">
+                <img src="ad3.jpg" style="width:100%;border-radius:6px;margin-bottom:10px;display:block;">
+                <img src="ad4.jpg" style="width:100%;border-radius:6px;display:block;">
+            </div>
+        </div>
+
+        <!-- ==== 2. PRINTS REAIS NO DIRECT ==== -->
+        <div class="section">
+            <div class="print-box">
+                <div class="print-title">📱 PRINTS ENVIADOS NO NOSSO DIRECT</div>
+                <img src="print1.jpg" class="print-img" alt="Print 1">
+        <p class="print-user">@leo_spz → Começou dia 15/01/2026</p>
+        <img src="print2.jpg" class="print-img" alt="Print 2">
+        <p class="print-user">@biel_x → Começou dia 01/01/2026</p>
+        <img src="print3.jpg" class="print-img" alt="Print 3">
+        <p class="print-user">@edu_rhs → Começou dia 23/12/2025</p>
+            </div>
+        </div>
+
+        <!-- ==== 3. GATILHO PREÇO “PARCELA DE PADARIA” ==== -->
+        <div class="section" style="text-align:center;">
+            <div class="price-box">
+                <div class="discount-badge">💥 DESCONTO 87 %</div>
+                <div class="original-price">De: R$ 297,90</div>
+                <div class="current-price">R$ 19,90</div>
+                <p style="margin-top:10px;font-size:1.1em;">
+                    🔥 Menos que <strong>1 café por dia</strong> por 14 dias<br>
+                    ✅ Pix ou cartão → liberação na hora
+                </p>
+            </div>
+        </div>
+
+        <!-- ==== 7. COUNTDOWN REAL + BARRA ==== -->
+        <div class="section" style="text-align:center;">
+            <h3 style="color:#ff0055;">⏰ Essa oferta acaba em:</h3>
+            <div id="countdown"></div>
+            <div id="progress"><div id="progress-bar"></div></div>
+            <p style="font-size:.9em;opacity:.8;">Quando zerar, preço volta pra R$ 297.</p>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="price-box">
+            <div class="discount-badge">💥 DESCONTO ESPECIAL 87 %   💥</div>
+            <div class="original-price">De: R$ 297,90</div>
+            <div class="current-price">R$ 19,90</div>
+            <p style="margin-top:10px;">
+                ✅ Acesso imediato (download)<br>
+                ✅ Garantia 30 dias ou seu dinheiro de volta*<br>
+                ✅ Pagamento 100 % seguro
+            </p>
+        </div>
+        <div class="dual-cta">
+            <a href="https://seguro.evoluamais.click/api/public/shopify?product=1677956171668&store=16779" class="cta-button">
+                SIM, QUERO PARAR DE SER PIADA!
+            </a>
+            <button class="btn-broke" disabled>
+                Prefiro continuar broxa e pagar chifre
+            </button>
+        </div>
+    </div>
+
+    <div class="doctor-signature">
+        Atenciosamente,<br>
+        <strong>Dr. Priscila Celles</strong><br>
+        CRM: 12345-SP | Especialista em Saúde Masculina<br>
+        *Aviso: resultado pode variar. Não substitui acompanhamento médico.
+    </div>
+</div>
+
+<div id="live-proof">
+    <span id="nome">João</span> de <span id="cidade">Santos</span> acabou de reservar → <span id="hora">14:33</span>
+</div>
 
 <script>
-// lógica do quiz
-const dados={};
-function irPergunta(num){
-  const marcado=document.querySelector(`input[name="q${num-1}"]:checked`);
-  if(num>1 && !marcado){alert('Escolha uma opção para continuar');return;}
-  document.querySelectorAll('.quiz-box').forEach(q=>q.style.display='none');
-  const prox=document.getElementById(`q${num}`);
-  if(prox){prox.style.display='block';}
-}
-function mostrarResultado(){
-  if(!document.querySelector('input[name="q4"]:checked')){alert('Escolha uma opção');return;}
-  dados.q1=document.querySelector('input[name="q1"]:checked').value;
-  dados.q2=document.querySelector('input[name="q2"]:checked').value;
-  dados.q3=document.querySelector('input[name="q3"]:checked').value;
-  dados.q4=document.querySelector('input[name="q4"]:checked').value;
-  let pct=82+Math.floor(Math.random()*15);
-  let txt=`<strong>Você tem ${pct}% de chance de aumentar 3 cm em 14 dias</strong> seguindo nosso protocolo. `;
-  if(dados.q1.includes('8-10')||dados.q1.includes('11-13'))txt+=`Com seu tamanho atual, o ganho será ainda mais perceptível. `;
-  if(dados.q3==='tamanho')txt+=`Focaremos no alongamento celular. `;
-  if(dados.q4==='ja')txt+=`Prioridade máxima: comece hoje antes que fique pior. `;
-  document.getElementById('texto-resultado').innerHTML=txt;
-  const msg=`Olá, acabei de fazer o quiz e descobri que tenho ${pct}% de chance de crescer 3 cm em 14 dias! Meu tamanho é ${dados.q1}cm, idade ${dados.q2}, maior problema: ${dados.q3}. Quero a vaga de R$ 19,90.`;
-  const zap=`https://seguro.evoluamais.click/checkout/Z-24FAT01WGA26?text=${encodeURIComponent(msg)}`;
-  document.getElementById('link-whatsapp').href=zap;
-  document.getElementById('q4').style.display='none';
-  document.getElementById('resultado').style.display='block';
-  // MOSTRA O RESTO DO SITE
-  document.getElementById('resto').style.display='block';
-  // (opcional) rola suave até o topo do resto
-  document.getElementById('resto').scrollIntoView({behavior:'smooth'});
-}
+// slider ego killer
+const slider=document.getElementById('size-slider');
+const display=document.getElementById('size-display');
+const popup=document.getElementById('slider-popup');
+slider.oninput=()=>{
+    display.textContent=slider.value+' cm';
+    popup.style.display= slider.value<=11 ? 'block' : 'none';
+};
 
-// countdown real
+// scarcity
+let vagas = 47;
+setInterval(() => {
+  vagas = Math.max(3, vagas - Math.floor(Math.random()*3));
+  document.getElementById('vagas').textContent = vagas;
+}, 9000);
+
+const cidades=['Rio','SP','Brasília','Curitiba','Porto Alegre','Recife'];
+const nomes=['Carlos','Roberto','Fernando','Lucas','Bruno','Rafael'];
+setInterval(()=>{
+  document.getElementById('nome').textContent=nomes[Math.floor(Math.random()*nomes.length)];
+  document.getElementById('cidade').textContent=cidades[Math.floor(Math.random()*cidades.length)];
+  document.getElementById('hora').textContent=new Date().toLocaleTimeString('pt-BR');
+},4200);
+
+/* ===== countdown real ===== */
 const end = new Date();
 end.setHours(23,59,59,999);
 function update(){
-  const now = new Date();
-  const diff = end - now;
-  if(diff<=0){document.getElementById('countdown').textContent='OFERTA ENCERRADA';return;}
-  const h=String(Math.floor(diff/3600000)).padStart(2,'0');
-  const m=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
-  const s=String(Math.floor((diff%60000)/1000)).padStart(2,'0');
-  document.getElementById('countdown').textContent=`${h}:${m}:${s}`;
-  const pct=Math.floor((diff/(24*3600000))*100);
-  document.getElementById('progress-bar').style.width=pct+'%';
+    const now = new Date();
+    const diff = end - now;
+    if(diff<=0){document.getElementById('countdown').textContent='OFERTA ENCERRADA';return;}
+    const h=String(Math.floor(diff/3600000)).padStart(2,'0');
+    const m=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+    const s=String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+    document.getElementById('countdown').textContent=`${h}:${m}:${s}`;
+    const pct=Math.floor((diff/(24*3600000))*100);
+    document.getElementById('progress-bar').style.width=pct+'%';
 }
 setInterval(update,1000); update();
 </script>
