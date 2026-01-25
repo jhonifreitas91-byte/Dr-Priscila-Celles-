@@ -5,244 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⚠️ CUIDADO! Em 2 semanas sua cueca vai ficar TÃO APERTADA que você vai precisar comprar outra…  ⚠️</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;}
-        body {
-            background: #ffffff;
-            color: #111;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.5;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
-        .header {
-            text-align: center;
-            padding: 30px 0 10px;
-        }
-        .header h1 {
-            font-size: clamp(1.6em, 5vw, 2.4em);
-            color: #ff0055;
-            margin-bottom: 10px;
-        }
-        .section {
-            background: #ffffff;
-            border: 1px solid #ff0055;
-            margin: 25px 0;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(255,0,85,.1);
-        }
-        .highlight {
-            background: #ff0055;
-            color: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            font-size: 1.4em;
-            font-weight: 900;
-            box-shadow: 0 0 20px rgba(255,0,85,.25);
-            margin: 20px 0;
-        }
-        .stats {
-            border-left: 4px solid #ff0055;
-            padding: 15px;
-            margin: 15px 0;
-            background: #fff0f5;
-        }
-        .method-box {
-            background: #ffffff;
-            border: 2px solid #ff0055;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        .testimonial {
-            background: #ffffff;
-            border: 1px solid #ff0055;
-            margin: 15px 0;
-            padding: 15px;
-            border-radius: 10px;
-        }
-        .stars {
-            color: #ff0055;
-            font-size: 1.3em;
-        }
-        .cta-button {
-            background: #ff0055;
-            color: #fff;
-            padding: 18px 35px;
-            font-size: 1.4em;
-            font-weight: 900;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            display: block;
-            margin: 25px auto;
-            text-decoration: none;
-            text-align: center;
-            max-width: 400px;
-            box-shadow: 0 0 20px rgba(255,0,85,.3);
-            transition: .2s;
-        }
-        .cta-button:hover {
-            background: #ffffff;
-            color: #ff0055;
-            border: 2px solid #ff0055;
-            transform: scale(1.05);
-        }
-        .price-box {
-            background: #ffffff;
-            border: 2px solid #ff0055;
-            color: #111;
-            padding: 25px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 0 25px rgba(255,0,85,.15);
-        }
-        .original-price {
-            text-decoration: line-through;
-            opacity: .6;
-        }
-        .current-price {
-            font-size: 2.5em;
-            font-weight: 900;
-            color: #ff0055;
-        }
-        .discount-badge {
-            background: #ff0055;
-            color: #fff;
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-weight: 900;
-            display: inline-block;
-            margin: 8px 0;
-        }
-        .doctor-signature {
-            text-align: center;
-            margin: 30px 0 10px;
-            font-size: .8em;
-            opacity: .7;
-        }
-        #live-proof {
-            position: fixed;
-            bottom: 15px;
-            left: 15px;
-            background: #ffffff;
-            color: #ff0055;
-            font-family: monospace;
-            font-size: 12px;
-            padding: 8px 12px;
-            border-radius: 6px;
-            z-index: 9999;
-            box-shadow: 0 0 10px rgba(255,0,85,.2);
-        }
-        .ego-killer {
-            background: #ff0055;
-            color: #fff;
-            text-align: center;
-            padding: 12px;
-            font-size: 1.3em;
-            font-weight: 900;
-        }
-        .slider-box {
-            background: #ffffff;
-            border: 2px solid #ff0055;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .slider {
-            width: 80%;
-            margin: 10px auto;
-            display: block;
-        }
-        #size-display {
-            font-size: 2em;
-            color: #ff0055;
-            font-weight: 900;
-        }
-        #slider-popup {
-            display: none;
-            background: #ff0055;
-            color: #fff;
-            padding: 15px;
-            border-radius: ;
-            margin-top: 15px;
-            font-weight: 900;
-        }
-        .dual-cta {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn-broke {
-            background: #ffffff;
-            color: #ccc;
-            padding: 15px 25px;
-            border: 1px solid #ccc;
-            border-radius: 25px;
-            font-size: 1em;
-            cursor: not-allowed;
-            opacity: .7;
-        }
-        .audio-box {
-            background: #fff0f5;
-            border-left: 4px solid #ff0055;
-            padding: 15px;
-            margin: 15px 0;
-            text-align: center;
-        }
-        .print-box {
-            background: #ffffff;
-            border: 2px solid #ff0055;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-            text-align: center;
-        }
-        .print-title {
-            color: #ff0055;
-            font-size: 1.3em;
-            font-weight: 900;
-            margin-bottom: 12px;
-        }
-        .print-img {
-            width: 100%;
-            max-width: 280px;
-            border-radius: 6px;
-            margin: 8px auto;
-            display: block;
-        }
-        .print-user {
-            color: #ff0055;
-            font-size: .9em;
-            margin-top: 6px;
-        }
-        #countdown {
-            font-size: 2em;
-            font-weight: 900;
-            color: #ff0055;
-        }
-        #progress {
-            background: #ff0055;
-            border-radius: 10px;
-            height: 20px;
-            margin: 15px auto;
-            max-width: 300px;
-            overflow: hidden;
-        }
-        #progress-bar {
-            background: #ffffff;
-            height: 100%;
-            border-radius: 10px;
-            width: 100%;
-            transition: width 1s;
-        }
-    </style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{background:#fff;color:#111;font-family:'Segoe UI',Arial,sans-serif;line-height:1.5;}
+    .container{max-width:900px;margin:0 auto;padding:0 10;}
+    .header{text-align:center;padding:30px 0 10px;}
+    .header h1{font-size:clamp(1.6em,5vw,2.4em);color:#F01B86;margin-bottom:10px;}
+    .section{background:#fff;border:1px solid #F01B86;margin:25px 0;padding:25px;border-radius:12px;box-shadow:0 0 10px rgba(240,27,134,.1);}
+    .highlight{background:#F01B86;color:#fff;padding:15px;border-radius:8px;text-align:center;font-size:1.4em;font-weight:900;box-shadow:0 0 20px rgba(240,27,134,.25);margin:20px 0;}
+    .stats{border-left:4px solid #F01B86;padding:15px;margin:15px 5 0;background:#fff0f5;}
+    .method-box{background:#fff;border:2px solid #F01B86;padding:25px;border-radius:12px;text-align:center;}
+    .testimonial{background:#fff;border:1px solid #F01B86;margin:15px 5 ;padding:15px;border-radius:10px;}
+    .stars{color:#F01B86;font-size:1.3em;}
+    .cta-button{background:#F01B86;color:#fff;padding:18px 35px;font-size:1.4em;font-weight:900;border:none;border-radius:30px;cursor:pointer;display:block;margin:25px auto;text-decoration:none;text-align:center;max-width:400px;box-shadow:0 0 20px rgba(240,27,134,.3);transition:.2s;}
+    .cta-button:hover{background:#fff;color:#F01B86;border:2px solid #F01B86;transform:scale(1.05);}
+    .price-box{background:#fff;border:2px solid #F01B86;color:#111;padding:25px;border-radius:12px;text-align:center;box-shadow:0 0 25px rgba(240,27,134,.15);}
+    .original-price{text-decoration:line-through;opacity:.6;}
+    .current-price{font-size:2.5em;font-weight:900;color:#F01B86;}
+    .discount-badge{background:#F01B86;color:#fff;padding:6px 12px;border-radius:15px;font-weight:900;display:inline-block;margin:8px 5 0;}
+    .doctor-signature{text-align:center;margin:30px 5 10px;font-size:.8em;opacity:.7;}
+    #live-proof{position:fixed;bottom:15px;left:15px;background:#fff;color:#F01B86;font-family:monospace;font-size:12px;padding:8px 12px;border-radius:6px;z-index:9999;box-shadow:0 0 10px rgba(240,27,134,.2);}
+    .ego-killer{background:#F01B86;color:#fff;text-align:center;padding:12px;font-size:1.3em;font-weight:900;}
+    .slider-box{background:#fff;border:2px solid #F01B86;padding:20px;border-radius:10px;text-align:center;margin:20px 5 0;}
+    .slider{width:80%;margin:10px auto;display:block;}
+    #size-display{font-size:2em;font-weight:900;color:#F01B86;}
+    #slider-popup{display:none;background:#F01B86;color:#fff;padding:15px;border-radius:8px;margin-top:15px;font-weight:900;}
+    .dual-cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+    .btn-broke{background:#fff;color:#ccc;border:1px solid #ccc;padding:15px 25px;border-radius:25px;font-size:1em;cursor:not-allowed;opacity:.7;}
+    .audio-box{background:#fff0f5;border-left:4px solid #F01B86;padding:15px;margin:15px 5 0;text-align:center;}
+    .print-box{background:#fff;border:2px solid #F01B86;padding:15px;border-radius:10px;margin:20px 5 0;text-align:center;}
+    .print-title{color:#F01B86;font-size:1.3em;font-weight:900;margin-bottom:12px;}
+    .print-img{width:100%;max-width:280px;border-radius:6px;margin:8px auto;display:block;}
+    .print-user{color:#F01B86;font-size:.9em;margin-top:6px;}
+    #countdown{font-size:2em;font-weight:900;color:#F01B86;}
+    #progress{background:#F01B86;border-radius:10px;height:20px;margin:15px auto;max-width:300px;overflow:hidden;}
+    #progress-bar{background:#fff;height:100%;border-radius:10px;width:100%;transition:width 1s;}
+</style>
+
 </head>
 <body>
 
