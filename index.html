@@ -69,16 +69,25 @@
        ⚡ QUERO PARAR DE SER ZOADO!  ⚡
 </a>
 
-<!-- VÍDEO COM THUMBNAIL -->
+<!-- VÍDEO COM ÍCONE DE PLAY SOBRE A CAPA -->
 <div class="section" style="text-align:center;">
-  <h3 style="color:#F01B86;margin-bottom:10px;">🔥 Dr. Priscila conta o segredo em 5 segundos</h3>
+  <h3 style="color:#F01B86;margin-bottom:10px;">🔥 Dr. Priscila conta o segredo em 35 segundos</h3>
 
-  <!-- player responsivo + capa -->
-  <div style="position:relative;padding-bottom:56.25%;height:0;max-width:560px;margin:0 auto;border-radius:10px;overflow:hidden;box-shadow:0 0 20px rgba(240,27,134,.25);cursor:pointer;" onclick="this.querySelector('video').play();this.querySelector('.thumb').style.display='none';">
+  <!-- container responsivo -->
+  <div style="position:relative;padding-bottom:56.25%;height:0;max-width:560px;margin:0 auto;border-radius:10px;overflow:hidden;box-shadow:0 0 20px rgba(240,27,134,.25);cursor:pointer;"
+       onclick="this.querySelector('video').play(); this.querySelector('.thumb').style.display='none'; this.querySelector('.play-btn').style.display='none';">
+    
     <!-- thumbnail -->
     <img src="capa.jpg" alt="Clique para assistir" class="thumb" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:2;">
-    <!-- vídeo -->
-    <video controls preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+
+    <!-- ícone de play -->
+    <div class="play-btn" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;background:rgba(240,27,134,.85);border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:3;">
+      <!-- triângulo do play -->
+      <div style="width:0;height:0;border-left:28px solid #fff;border-top:18px solid transparent;border-bottom:18px solid transparent;margin-left:6px;"></div>
+    </div>
+
+    <!-- vídeo (invisível até o play) -->
+    <video preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
       <source src="doutoura.mp4" type="video/mp4">
       Seu navegador não suporta vídeo HTML5.
     </video>
@@ -88,6 +97,7 @@
     “Doutora, eu evito até urinar em público… se alguém olha, eu giro o corpo todo pra esconder.”
   </p>
 </div>
+
 
 
 
