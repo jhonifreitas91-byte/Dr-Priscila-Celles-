@@ -69,15 +69,26 @@
        ⚡ QUERO PARAR DE SER ZOADO!  ⚡
 </a>
 
-<!-- VÍDEO DR. PRISCILA (já centralizado) -->
+<!-- VÍDEO COM THUMBNAIL -->
 <div class="section" style="text-align:center;">
   <h3 style="color:#F01B86;margin-bottom:10px;">🔥 Dr. Priscila conta o segredo em 35 segundos</h3>
-  <div style="position:relative;padding-bottom:56.25%;height:0;max-width:560px;margin:0 auto;border-radius:10px;overflow:hidden;box-shadow:0 0 20px rgba(240,27,134,.25);">
-    <video controls style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
-      <source src="doutoura.mp4" type="video/mp4">
+
+  <!-- player com capa -->
+  <div style="position:relative;padding-bottom:56.25%;height:0;max-width:560px;margin:0 auto;border-radius:10px;overflow:hidden;box-shadow:0 0 20px rgba(240,27,134,.25);cursor:pointer;" onclick="this.querySelector('video').play();this.querySelector('.thumb').style.display='none';">
+    <!-- miniatura -->
+    <img src="capa.jpg" alt="Clique para assistir" class="thumb" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:2;">
+    <!-- vídeo -->
+    <video preload="metadata" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+      <source src="doutora.mp4" type="video/mp4">
       Seu navegador não suporta vídeo HTML5.
     </video>
   </div>
+
+  <p style="margin-top:10px;font-size:.9em;opacity:.8;">
+    “Doutora, eu evito até urinar em público… se alguém olha, eu giro o corpo todo pra esconder.”
+  </p>
+</div>
+
   <p style="margin-top:10px;font-size:.9em;opacity:.8;">
     “Doutora, eu evito até urinar em público… se alguém olha, eu giro o corpo todo pra esconder.”
   </p>
