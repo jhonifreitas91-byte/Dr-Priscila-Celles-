@@ -75,7 +75,7 @@ display:block;width:100%;border-radius:12px;margin-top:8px;
 
 <div id="app">
 <div id="header">
-<img src="https://i.pravatar.cc/48?u=dr-caio">
+<img src="ad1.jpg">
 <div>
 <div>Dr. Caio</div>
 <div id="status">online agora</div>
@@ -135,18 +135,20 @@ const flow = [
 {who:'bot', text:'{{nome}}, me responde de verdade: <b>quantos centímetros tem seu pau ereto?</b>'},
 {wait:true,key:'atual'},
 {who:'bot', text:'{{atual}} cm? Kkkkk <b>minha esposa riria na sua cara.</b>'},
-{who:'bot', text:'Quanto você <b>gostaria</b> de ter? (fale a real)'},
+{who:'bot', text:'Quanto você <b>gostaria</b> de ter?'},
 {wait:true,key:'desejo'},
-{who:'bot', text:'De {{atual}} cm para {{desejo}} cm em 17 dias. Só se você seguir o que eu mandar.'},
-{who:'bot', text:'Olha o que aconteceu com o Lucas, 26 anos, de 12 cm para 18 cm:', img:'<img class="img-bubble" src="https://i.imgur.com/8Xy1zXa.jpg">'},
+{who:'bot', text:'De {{atual}} cm para {{desejo}} cm em 17 dias. Só se você seguir o passo a passo.'},
+{who:'bot', text:'Olha o que aconteceu com o Lucas, 26 anos, de 12 cm para 18 cm:', img:'<img class="img-bubble" src="ad1.jpg">'},
 {who:'bot', text:'A namorada dele <b>nunca mais vai largar</b>. Antes chorava de dor, agora chora de tesão.'},
 {who:'bot', text:'Quer ver mais resultados? (s/n)'},
 {wait:true,key:'ver'},
-{who:'bot', text:'Só mostro dentro do grupo. Clica no link exclusivo que vou gerar <b>agora</b>.'},
-{who:'bot', text:'👉 <b>DESCONTO VITALÍCIO: R$ 12,50</b> (era R$ 197)'},
-{who:'bot', text:'Depois de clicar me confirma aqui que eu te mando o passo a passo no WhatsApp.'},
-{who:'bot', text:'Link com teu nome: <b>https://dr-caio.com/{{nome}}</b>'},
-{who:'bot', text:'Últimas 3 vagas. Corre.'}
+{who:'bot', text:'{{nome}}, você precisa entender uma coisa: o problema não é só o tamanho. É a <b>insegurança que invade sua mente</b> toda vez que você fica nu na frente de uma mulher.'},
+{who:'bot', text:'É o <b>medo de ser comparado</b> com os ex dela. É a <b>vergonha de tirar a cueca</b> na primeira transa. É o <b>pânico de não conseguí-la gozar</b> e ela te chamando de "broxa" pros amigos.'},
+{who:'bot', text:'Eu já atendi mais de 8.000 homens com esse mesmo problema. E todos tinham a mesma história: <b>evitavam sexo, faziam com as luzes apagadas, inventavam desculpas pra não ficar nu</b>.'},
+{who:'bot', text:'Mas tem solução. E não é pomada ridícula nem pílula de farmácia. É um método que eu desenvolvi depois de 15 anos de estudo. <b>Aumenta o tamanho e a grossura, e ainda deixa você durando 40 minutos sem gozar</b>.'},
+{who:'bot', text:'O link que eu vou te passar agora é <b>exclusivo pro seu nome</b>. Só vai funcionar por 10 minutos. Depois disso, você vai continuar com o mesmo pau pequeno pra sempre.'},
+{who:'bot', text:'👉 <a href="PREENCHA_SEU_LINK_AQUI" style="color:#ff0044;font-weight:900;font-size:1.2em;">CLIQUE AQUI</a> e garanta seu acesso vitalício por apenas R$ 12,50 (era R$ 197)'},
+{who:'bot', text:'Depois de clicar, me confirma aqui que eu te mando o passo a passo no WhatsApp.'}
 ];
 
 function runStep(){
@@ -158,8 +160,8 @@ setTimeout(()=>{
 rmTyping();
 addMsg(node.who, node.text.replace(/\{\{(\w+)\}\}/g,(_,k)=>userData[k]||''), node.img);
 step++;
-runStep();
-},1200);
+setTimeout(runStep, 2500);
+},1800);
 }else{
 input.focus();
 sendBtn.onclick = ()=>{
@@ -169,7 +171,7 @@ addMsg('user', val + check());
 userData[node.key] = val;
 input.value = '';
 step++;
-setTimeout(runStep, 600);
+setTimeout(runStep, 1200);
 };
 }
 }
