@@ -99,6 +99,7 @@ const app = document.getElementById('app');
 
 let step = 0;
 let userData = {};
+let waitingInput = false;
 
 function hora(){const d=new Date();return d.getHours()+':'+String(d.getMinutes()).padStart(2,0);}
 function check(){return '<span class="check">✓✓</span>';}
@@ -153,8 +154,10 @@ const flow = [
 
 function runStep(){
 if(step >= flow.length) return;
+if(waitingInput) return;
 const node = flow[step];
 if(node.who){
+waitingInput = false;
 addTyping();
 setTimeout(()=>{
 rmTyping();
@@ -163,18 +166,25 @@ step++;
 setTimeout(runStep, 3500);
 },2200);
 }else{
+waitingInput = true;
 input.focus();
-sendBtn.onclick = ()=>{
+}
+}
+
+function handleUserInput(){
+if(!waitingInput) return;
 const val = input.value.trim();
 if(!val) return;
 addMsg('user', val + check());
-userData[node.key] = val;
+userData[flow[step].key] = val;
 input.value = '';
+waitingInput = false;
 step++;
 setTimeout(runStep, 1800);
-};
 }
-}
+
+sendBtn.onclick = handleUserInput;
+input.onkeypress = (e) => {if(e.key==='Enter') handleUserInput();};
 
 btnEntrar.onclick = ()=>{
 document.getElementById('tela-cheia').style.display = 'none';
